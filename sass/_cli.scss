@@ -1,0 +1,33 @@
+.cli {
+  padding: 0 30px;
+  &__flex {
+    @include width(1000);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    &__cli-img {
+      width: set-col-width(6);
+      img {
+        width: 100%;
+        background: no-repeat center center/cover;
+      }
+      @include media(700) {
+        width: set-col-width(12);
+      }
+    }
+    &__content {
+      width: set-col-width(6);
+      &__card {
+        box-shadow: 0 0 2.5px 0.5px rgba(0, 0, 0, 0.5);
+        text-align: center;
+        border-radius: 5px;
+        padding: 10px 0;
+        margin: 16px 0;
+      }
+      @include media(700) {
+        width: set-col-width(12);
+      }
+    }
+  }
+}

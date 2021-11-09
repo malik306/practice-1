@@ -1,0 +1,77 @@
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  border: none;
+  outline: none;
+  list-style: none;
+}
+body {
+  font-family: sans-serif;
+}
+@mixin col {
+  flex: 1 0 0%; //used by bootstrap without width setting
+}
+@mixin flex-1 {
+  flex: 1;
+}
+@mixin flex-0 {
+  flex: 0;
+}
+@mixin flex-auto {
+  flex: auto;
+}
+@mixin flex-none {
+  flex: none; //used by bootstrap with width setting
+}
+@mixin media($max) {
+  @media (max-width: #{$max - 0.02}px) {
+    @content;
+  }
+}
+@mixin width($max) {
+  @if ($max!=null) {
+    max-width: #{$max}px;
+  }
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 12px;
+}
+@function set-col-width($value) {
+  @return calc(100% / calc(12 / $value));
+}
+@keyframes slideInFromLeft {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+@keyframes slideInFromRight {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+@keyframes slideInFromTop {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+@keyframes slideInFromBottom {
+  0% {
+    transform: translateY(100%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}

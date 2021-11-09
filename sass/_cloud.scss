@@ -1,0 +1,49 @@
+.cloud {
+  background: rgba(0, 0, 0, 0.4);
+  padding: 20px 0;
+  &__flex {
+    @include width(1000);
+    display: flex;
+    flex-wrap: wrap;
+    &__content {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 15px;
+      width: set-col-width(6);
+      text-align: center;
+      a {
+        color: white;
+        display: flex;
+        justify-items: flex-end;
+        background: rgba(0, 0, 0, 0.6);
+        padding: 10px;
+        border-radius: 5px;
+        transition: all 0.5s;
+        letter-spacing: 1.5px;
+        border: 1px solid transparent;
+        &:hover {
+          background: white;
+          border-color: black;
+          color: black;
+        }
+      }
+      @include media(860) {
+        width: set-col-width(12);
+      }
+    }
+    &__cloud-img {
+      width: set-col-width(6);
+      margin: 0 auto;
+      img {
+        width: 100%;
+        background: no-repeat center center/cover;
+      }
+      @include media(860) {
+        width: set-col-width(8);
+        padding-top: 10px;
+      }
+    }
+  }
+}

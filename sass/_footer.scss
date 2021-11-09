@@ -1,0 +1,47 @@
+.footer {
+  background: rgba(0, 0, 0, 0.4);
+  padding: 20px;
+  &__grid {
+    @include width(1000);
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    &__top {
+      color: white;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    &__center {
+      &__items {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        &__item {
+          &__link {
+            color: white;
+          }
+          &:hover &__link {
+            color: rgba(255, 255, 255, 0.6);
+          }
+        }
+      }
+    }
+    &__bottom {
+      display: flex;
+      gap: 16px;
+      &__item{
+          &__link{
+              i{
+                  color: white;
+              }
+          }
+          &:hover &__link i{
+              color: rgba(255, 255, 255, 0.6);
+          }
+      }
+    }
+  }
+}

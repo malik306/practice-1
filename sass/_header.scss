@@ -1,0 +1,53 @@
+.header {
+  background: rgba(0, 0, 0, 0.5);
+  height: 16vh;
+  display: flex;
+  align-items: center;
+  &__top {
+    @include width(1000);
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    &__logo {
+      color: white;
+      font-size: 30px;
+    }
+    &__nav {
+      &__items {
+        display: flex;
+        &__item {
+          margin: 0 6px;
+          &__link {
+            color: white;
+            padding: 6px;
+            text-transform: uppercase;
+            border-radius: 5px;
+            background: #000;
+            transition: all 1s;
+            white-space: nowrap;
+          }
+          &:hover &__link {
+            color: black;
+            background: white;
+          }
+        }
+      }
+      @include media(750){
+        position: absolute;
+        top: 56px;
+        background: rgba(0, 0, 0, 1);
+        width: 100%;
+        left: 0;
+        padding: 12px;
+        z-index: 2;
+        &__items{
+          flex-direction: column;
+          &__item{
+            margin: 10px 0;
+          }
+        }
+      }
+    }
+  }
+}
